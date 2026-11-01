@@ -1,0 +1,18 @@
+# WordPress core & vendor content (install separately, never commit)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+!/wp-content/
+/wp-content/*
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/cirilinfo-core/
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/cirilinfo/
+wp-config.php
+.env
+node_modules/
+vendor/
+*.log
+.DS_Store

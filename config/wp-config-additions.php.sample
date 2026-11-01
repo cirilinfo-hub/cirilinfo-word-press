@@ -1,0 +1,26 @@
+<?php
+/**
+ * Add the relevant lines to wp-config.php ABOVE the "That's all, stop editing!" comment.
+ * Keep secrets out of the database and out of version control.
+ */
+
+// --- Production hardening -------------------------------------------------
+define( 'DISALLOW_FILE_EDIT', true );          // no theme/plugin editor in wp-admin
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
+define( 'FORCE_SSL_ADMIN', true );
+define( 'WP_DEBUG', false );
+define( 'WP_DEBUG_LOG', false );
+define( 'WP_MEMORY_LIMIT', '256M' );
+define( 'WP_POST_REVISIONS', 10 );
+define( 'EMPTY_TRASH_DAYS', 14 );
+// Behind a load balancer / reverse proxy that terminates TLS:
+// if ( ( $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '' ) === 'https' ) { $_SERVER['HTTPS'] = 'on'; }
+
+// --- SMTP password (preferred over storing it in the database) -----------
+// define( 'CIRILINFO_SMTP_PASS', 'your-smtp-password' );
+
+// --- Real cron (recommended): disable WP-Cron's per-request trigger ------
+// define( 'DISABLE_WP_CRON', true );   // then: */5 * * * * curl -s https://example.com/wp-cron.php >/dev/null
+
+// Razorpay / Cashfree / PayU keys are entered in WooCommerce > Settings > Payments
+// (stored by the official gateway plugins). Never put secret keys in theme/JS files.

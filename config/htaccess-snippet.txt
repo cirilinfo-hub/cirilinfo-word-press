@@ -1,0 +1,19 @@
+# Apache: add above "# BEGIN WordPress" in .htaccess
+<FilesMatch "^(wp-config\.php|\.htaccess|readme\.html|license\.txt)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^wp-content/uploads/.*\.php$ - [F,L]
+</IfModule>
+# wp-content/uploads/cirilinfo-private/.htaccess is created automatically by the plugin.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 30 days"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

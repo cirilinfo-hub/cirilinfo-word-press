@@ -1,0 +1,17 @@
+.ci-admin .ci-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:16px 0}
+.ci-admin .ci-card{background:#fff;border:1px solid #dcdfea;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.ci-admin .ci-card span{color:#646b8a;font-size:12px;text-transform:uppercase;letter-spacing:.05em}.ci-admin .ci-card strong{font-size:24px;color:#1b1464}
+.ci-admin .ci-two{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));margin-bottom:16px}
+.ci-admin .ci-box{background:#fff;border:1px solid #dcdfea;border-radius:10px;padding:16px}.ci-admin .ci-box h2{margin-top:0;font-size:15px}
+.ci-admin .ci-filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.ci-admin .ci-setup-row{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid #eef0f6}
+.ci-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#bbb}.ci-dot--ok{background:#0a8f4d}.ci-dot--warn{background:#e09100}.ci-dot--fail{background:#d1273e}
+.ci-badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600;background:#eceffa;color:#46507a;text-transform:capitalize}
+.ci-badge--success,.ci-badge--completed,.ci-badge--delivered,.ci-badge--resolved,.ci-badge--won{background:#e1f6ea;color:#0a6b3a}
+.ci-badge--in_progress,.ci-badge--assigned,.ci-badge--confirmed,.ci-badge--open,.ci-badge--contacted,.ci-badge--quoted{background:#e4eaff;color:#2845c9}
+.ci-badge--review,.ci-badge--pending,.ci-badge--payment_pending,.ci-badge--awaiting_requirements,.ci-badge--new{background:#fff1da;color:#9a5600}
+.ci-badge--failed,.ci-badge--cancelled,.ci-badge--duplicate,.ci-badge--lost,.ci-badge--refunded,.ci-badge--closed{background:#fde4e8;color:#a31a2e}
+.ci-bar{display:inline-block;vertical-align:middle;width:90px;height:7px;background:#e9ecf7;border-radius:99px;overflow:hidden}.ci-bar span{display:block;height:100%;background:#5b3df5}
+.ci-thread{list-style:none;margin:0 0 12px;padding:0}.ci-thread li{padding:8px 12px;margin-bottom:8px;border-radius:8px;background:#f4f5fa}.ci-thread li.is-staff{background:#efeaff}
+.ci-thread__meta{font-size:12px;color:#646b8a}.ci-files{list-style:none;padding:0}.ci-files svg{vertical-align:middle}
+.ci-meta th{width:220px}.ci-repeater table input[type=text],.ci-repeater table input[type=number]{width:100%}
